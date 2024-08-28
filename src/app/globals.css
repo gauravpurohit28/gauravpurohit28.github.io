@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 206, 153, 207;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centers the button vertically and horizontally */
+}
+
+.message-button {
+  font-family: 'Copperplate, Papyrus, fantasy';
+  font-size: 24px;
+  padding: 20px 40px; /* Adjust padding as needed */
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-button:hover {
+  background-color: #e0e0e0;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 80%; /* Limit height to 80% of the viewport */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.dialog-content {
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
