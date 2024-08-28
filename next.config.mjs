@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['images.unsplash.com','i.scdn.co','assets.aceternity.com'],
-    },
-  };
-  
-  export default nextConfig;
-  
+  images: {
+    domains: ['assets.aceternity.com'],
+    unoptimized: true, // This is necessary when exporting static files on GitHub Pages
+  },
+  output: 'export', // Enable static export
+  distDir: 'docs', // Set output directory to 'docs' for GitHub Pages
+};
+
+export default nextConfig;
