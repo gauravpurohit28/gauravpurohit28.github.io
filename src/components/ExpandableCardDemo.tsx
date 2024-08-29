@@ -248,7 +248,7 @@ const cards = [
   {
     description: "Pritam, Sreeram,Shilpa Rao",
     title: "Subhanallah",
-    src: "/images/Subhanallah.jpg",
+    src: "/images/subhanallah.jpg",
     ctaText: "Play",
     audioSrc: "/audios/Subhanallah.mp3", // Path to your audio file
     content: () => (

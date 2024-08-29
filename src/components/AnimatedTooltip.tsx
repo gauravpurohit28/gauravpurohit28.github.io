@@ -28,7 +28,7 @@ const people = [
     name: "Mr. Boyfriend",
     designation: "Pookie",
     image:
-      "/images/me.jpg",
+      "/images/Me.jpg",
   },
   {
     id: 5,
