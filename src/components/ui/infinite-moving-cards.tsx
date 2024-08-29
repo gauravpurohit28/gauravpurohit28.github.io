@@ -21,30 +21,27 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const [start, setStart] = useState(false);
 
   useEffect(() => {
     addAnimation();
-  }, []);
-  
-  const [start, setStart] = useState(false);
-  
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
+  }, [direction, speed]); // Add direction and speed as dependencies
 
+  const addAnimation = () => {
+    if (containerRef.current && scrollerRef.current) {
+      // Duplicate items for infinite scroll effect
+      const scrollerContent = Array.from(scrollerRef.current.children);
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        scrollerRef.current?.appendChild(duplicatedItem);
       });
 
       getDirection();
       getSpeed();
       setStart(true);
     }
-  }
-  
+  };
+
   const getDirection = () => {
     if (containerRef.current) {
       containerRef.current.style.setProperty(
@@ -53,7 +50,7 @@ export const InfiniteMovingCards = ({
       );
     }
   };
-  
+
   const getSpeed = () => {
     if (containerRef.current) {
       const durations = {
@@ -73,7 +70,7 @@ export const InfiniteMovingCards = ({
         className
       )}
       style={{
-        backgroundColor: "rgb(224, 195, 224)", // Changed background color
+        backgroundColor: "rgb(224, 195, 224)", // Updated background color
         WebkitMaskImage: "linear-gradient(to right, transparent, rgb(206,153,207) 5%, rgb(206,153,207) 95%, transparent)" // Updated mask-image color
       }}
     >
