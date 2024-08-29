@@ -232,19 +232,18 @@ const cards = [
     ctaText: "Play",
     audioSrc: "/audios/i would never.mp3",
     content: () => (
-        <p>
-            <p>Georgia, wrap me up in all your</p>
-            <p>I want you in my arms</p>
-            <p>Oh, let me hold you</p>
-            <p>I'll never let you go again like I did</p>
-            <p>Oh, I used to say</p>
-            <p>… I would never fall in love again until I found her</p>
-            <p>I said, "I would never fall unless it's you I fall into"</p>
-            <p>I was lost within the darkness, but then I found her</p>
-            <p>I found you</p>
-        </p>
+      <p>
+        <p>Georgia, wrap me up in all your</p>
+        <p>I want you in my arms</p>
+        <p>Oh, let me hold you</p>
+        <p>I&apos;ll never let you go again like I did</p>
+        <p>Oh, I used to say</p>
+        <p>… I would never fall in love again until I found her</p>
+        <p>I said, &quot;I would never fall unless it&apos;s you I fall into&quot;</p>
+        <p>I was lost within the darkness, but then I found her</p>
+        <p>I found you</p>
+      </p>
       ),
-    
   },
   {
     description: "Pritam, Sreeram,Shilpa Rao",
@@ -261,7 +260,7 @@ const cards = [
           <p>Ik Ankahi Si Daastaan Daastaan</p>
           <p>Kehne Lagega Aaina Subhanallah...</p>
           <p>Jo Ho Raha Hain Pehli Dafaa Hai Wallah</p>
-          <p>Aisa Hua, Subhanallah..</p>
+          <p>Aisa Hua, Subhanallah</p>
           <p>Jo Ho Raha Hai Pehli Dafaa Hai Wallah</p>
           <p>Aisa Hua</p>
         </p>
@@ -277,7 +276,7 @@ const cards = [
     content: () => (
         <p>
           <p>My Desi Girl, My Desi Girl,</p>
-          <p>Girl Girl Girl Girl……</p>
+          <p>Girl Girl Girl Girl</p>
           <p>My Desi Girl, My Desi</p>
           <p>Girl, Girl Girl Girl Girl……</p>
           <p>Jhoomka Girade,</p>
@@ -325,10 +324,11 @@ const cards = [
           <p>Sooraj ki baahon mein, ab hai yeh zindagi</p>
           <p>Kirne hain saanson mein, baaton mein roshni</p>
 
-          <p>Jo bhi badali dil ki taal hai, ahaa..</p>
-          <p>Yunhi hi aaya ek khayal hai, ahaa..</p>
+          <p>Jo bhi badali dil ki taal hai, ahaa</p>
+          <p>Yunhi hi aaya ek khayal hai, ahaa</p>
           <p>Paate hum hai zindagi ik baar</p>
         </p>
       ),
     },
+  
 ];
